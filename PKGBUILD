@@ -1,7 +1,7 @@
 # Maintainer: Vaishakh G K <vaishakhgk2006@gmail.com>
 pkgname='systune-git'
-pkgver=r42.ae8afc4
-pkgrel=1
+pkgver=r48.58d6da0
+pkgrel=2
 pkgdesc="A lightweight and efficient GTK-based system settings manager"
 arch=('x86_64')
 url="https://github.com/fulgurcode/systune"
@@ -36,10 +36,11 @@ build() {
 package() {
 	cd "$pkgname"
   install -Dm755 "./bin/systune" "$pkgdir/usr/bin/systune"
-  install -Dm644 "./README.md" "$pkgdir/usr/share/doc/$pkgname"
   install -Dm755 "./systune.desktop" "$pkgdir/usr/share/applications/systune.desktop"
+  install -Dm644 "./README.md" "$pkgdir/usr/share/doc/$pkgname"
   install -Dm644 "./assets/systune.png" "$pkgdir/usr/share/pixmaps/systune.png"
 
-	cp -r "./ui" "$pkgdir/usr/share/systune/"
-	cp -r "./styles" "$pkgdir/usr/share/systune/"
+  mkdir "$pkgdir/usr/share/systune"
+	cp -r "./ui/" "$pkgdir/usr/share/systune/ui/"
+	cp -r "./styles/" "$pkgdir/usr/share/systune/styles/"
 }

@@ -1,7 +1,7 @@
 pkgbase = systune-git
 	pkgdesc = A lightweight and efficient GTK-based system settings manager
-	pkgver = r42.ae8afc4
-	pkgrel = 1
+	pkgver = r48.58d6da0
+	pkgrel = 2
 	url = https://github.com/fulgurcode/systune
 	arch = x86_64
 	license = GPL-3.0-or-later
